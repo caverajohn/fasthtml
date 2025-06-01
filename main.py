@@ -91,7 +91,7 @@ def render_content():
         form,
         Div(
             "Made with ❤️ by  ",
-            A("John Cavera!", href="https://youtube.com/codingisfun", target="_blank"),
+            A("John Cavera!!", href="https://youtube.com/codingisfun", target="_blank"),
         ),
         Hr(),
         render_message_list(),
