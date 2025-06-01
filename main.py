@@ -101,7 +101,7 @@ def render_content():
 @rt("/change")
 def get():
     return Titled(
-        "Change", P("Nice to be here {change}", A("Go back to homr", href="/"))
+        "Change!!", P("Nice to be here {change}", A("Go back to homr", href="/"))
     )
 
 
