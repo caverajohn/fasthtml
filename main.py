@@ -1,4 +1,4 @@
-import os
+# import os
 from datetime import datetime
 import pytz
 from supabase import create_client
@@ -21,7 +21,7 @@ app, rt = fast_app(
 
 
 def get_cet_time():
-    cet_tz = pytz.timezone("CET")
+    cet_tz = pytz.timezone("America/Sao_Paulo")
     return datetime.now(cet_tz)
 
 
@@ -64,7 +64,7 @@ def render_content():
                     Input(
                         type="text",
                         name="name",
-                        placeholder="Your name John",
+                        placeholder="Your name",
                         required=true,
                         maxlength=MAX_NAME_CHAR,
                     ),
@@ -87,11 +87,11 @@ def render_content():
         ),
     )
     return Div(
-        P(Em("Write something bad")),
+        P(Em("Write something nice 🤗")),
         form,
         Div(
             "Made with ❤️ by  ",
-            A("John Cavera!!", href="https://youtube.com/codingisfun", target="_blank"),
+            A("John Cavera!!", href="https://www.deadcode.com.br", target="_blank"),
         ),
         Hr(),
         render_message_list(),
