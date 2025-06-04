@@ -11,12 +11,13 @@ load_dotenv()
 
 MAX_NAME_CHAR = 15
 MAX_MESSAGE_CHAT = 30
-TIMESTAMP_FMT = "%Y-%m-%d %I:%M:%S CET"
+TIMESTAMP_FMT = "%d/%m/%Y %H:%M:%S America/Sao_Paulo"
 # Initialize supabase client
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
 app, rt = fast_app(
     hdrs=(Link(rel="icon", type="assets/x-icon", href="/assets/favicon.png"),),
+    live=True,
 )
 
 
@@ -116,4 +117,4 @@ def post(name: str, message: str):
     return render_message_list()
 
 
-serve()
+serve(reload=True)
